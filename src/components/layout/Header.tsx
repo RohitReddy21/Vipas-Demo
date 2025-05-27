@@ -39,7 +39,7 @@ const Header: React.FC = () => {
       <div className="container-custom flex justify-between items-center">
         <Link to="/" className="z-20">
           {/* <Logo isScrolled={true} /> */}
-          <img src={logo} alt="" className='w-[250px] h-[75px] object-contain cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80 hover:shadow-lg hover:shadow-primary ' />
+          <img src={logo} alt="" className='w-[200px] h-[75px] object-contain cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80 hover:shadow-lg hover:shadow-primary ' />
         </Link>
 
         {/* Desktop Navigation */}
