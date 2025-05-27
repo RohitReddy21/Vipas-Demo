@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import Logo from '../ui/Logo';
-
+// import Logo from '../ui/Logo';
+import logo from '../home/assets/logo.png';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-secondary text-white pt-16 pb-8">
@@ -11,7 +11,8 @@ const Footer: React.FC = () => {
           {/* Column 1: About */}
           <div>
             <div className="mb-6">
-              <Logo isLight={true} />
+            <img src={logo} alt="" className='w-[250px] h-[75px] object-contain cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80 hover:shadow-lg hover:shadow-primary rounded-md rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px]' />
+
             </div>
             <p className="text-gray-300 mb-6">
               Vipas Energy is dedicated to providing sustainable energy solutions that power the future while preserving our planet.

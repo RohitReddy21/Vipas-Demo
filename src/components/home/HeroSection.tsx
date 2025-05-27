@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
 import SolarPanel from '../three/SolarPanel';
-
+import video from '../home/assets/video.webm'
 const HeroSection: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
     muted
     playsInline
   >
-    <source src="https://www.aramco.com/-/media/images/sustainability/sustainability-report/report-2024/overview_sus24.mp4" type="video/mp4" />
+    <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
