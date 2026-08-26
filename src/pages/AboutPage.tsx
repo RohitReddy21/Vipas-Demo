@@ -42,17 +42,17 @@ const AboutPage = () => {
       <section 
         id="hero"
         data-animate
-        className={`pt-32 pb-20 relative overflow-hidden ${
+        className={`pt-36 pb-20 relative overflow-hidden ${
           isVisible('hero') ? sectionVariants.heroVisible : sectionVariants.hero
         }`}
         style={{ backgroundColor: '#003F5C' }}
       >
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-35">
             <source src={heroVideo} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#003F5C]/90 to-[#003F5C]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#003F5C]/70 to-[#003F5C]/50"></div>
         </div>
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l opacity-20 z-[1]" style={{ background: 'linear-gradient(to left, #00A176, transparent)' }}></div>

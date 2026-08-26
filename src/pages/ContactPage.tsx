@@ -43,12 +43,12 @@ const ContactPage: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 pb-20 bg-secondary">
+      <section className="relative overflow-hidden pt-36 pb-20 bg-secondary">
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-35">
             <source src={heroVideo} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 to-secondary/50"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div

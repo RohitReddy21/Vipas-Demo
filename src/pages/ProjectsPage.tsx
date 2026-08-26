@@ -104,7 +104,7 @@ const ProjectsPage: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden" style={{ backgroundColor: '#003F5C' }}>
+      <section className="pt-36 pb-20 relative overflow-hidden" style={{ backgroundColor: '#003F5C' }}>
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video

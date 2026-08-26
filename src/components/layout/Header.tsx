@@ -62,13 +62,13 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.path}
               className={({ isActive }) => `
-                font-montserrat font-medium text-base
+                font-montserrat font-medium text-base whitespace-nowrap
                 transition-colors duration-300
                 relative group
                 ${isActive ? 'text-primary' : 'text-black hover:text-primary'}
@@ -86,14 +86,14 @@ const Header: React.FC = () => {
               )}
             </NavLink>
           ))}
-          <Link to="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary whitespace-nowrap">
             Get a Quote
           </Link>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden z-[60] relative p-2 -mr-2 touch-manipulation rounded-md transition-colors duration-300 ${
+          className={`lg:hidden z-[60] relative p-2 -mr-2 touch-manipulation rounded-md transition-colors duration-300 ${
             isMobileMenuOpen ? 'bg-white' : ''
           }`}
           onClick={toggleMobileMenu}
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              className="fixed inset-0 z-50 flex flex-col bg-secondary md:hidden"
+              className="fixed inset-0 z-50 flex flex-col bg-secondary lg:hidden"
               initial={{ clipPath: 'circle(0% at calc(100% - 2.5rem) 2.5rem)' }}
               animate={{ clipPath: 'circle(150% at calc(100% - 2.5rem) 2.5rem)' }}
               exit={{ clipPath: 'circle(0% at calc(100% - 2.5rem) 2.5rem)' }}
