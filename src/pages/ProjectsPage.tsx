@@ -331,10 +331,115 @@ const ProjectsPage: React.FC = () => {
       </section>
 
       {/* Projects Gallery */}
+<<<<<<< HEAD
       {/* <section className="py-20 bg-white" ref={ref}>
         <div className="container-custom">
           {/* Filter Controls */}
           {/*  */}
+=======
+      <section className="py-20 bg-white" ref={ref}>
+        <div className="container-custom">
+          {/* Filter Controls */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-5 py-2 rounded-full font-montserrat transition-all duration-300 ${
+                  selectedCategory === category.id 
+                    ? 'text-white shadow-md' 
+                    : 'hover:shadow-md'
+                }`}
+                style={selectedCategory === category.id 
+                  ? { backgroundColor: '#00A176' }
+                  : { backgroundColor: '#E6F4F1', color: '#4A4A4A' }
+                }
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedCategory}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filteredProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="h-60 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-3">
+                      <span 
+                        className="text-xs font-montserrat uppercase tracking-wider px-2 py-1 rounded"
+                        style={{ backgroundColor: '#E6F4F1', color: '#003F5C' }}
+                      >
+                        {project.category.replace('-', ' ')}
+                      </span>
+                      <span className="text-sm" style={{ color: '#4A4A4A' }}>{project.year}</span>
+                    </div>
+                    <h3 className="font-montserrat font-semibold text-xl mb-2" style={{ color: '#003F5C' }}>
+                      {project.title}
+                    </h3>
+                    <p className="mb-4" style={{ color: '#4A4A4A' }}>{project.description}</p>
+                    
+                    <div className="mb-4 text-sm">
+                      <div className="flex items-start gap-2 mb-1">
+                        <span className="font-semibold" style={{ color: '#003F5C' }}>Client:</span>
+                        <span style={{ color: '#4A4A4A' }}>{project.client}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold" style={{ color: '#003F5C' }}>Location:</span>
+                        <span style={{ color: '#4A4A4A' }}>{project.location}</span>
+                      </div>
+                    </div>
+                    
+                    <a 
+                      href={project.link} 
+                      className="inline-block font-montserrat font-medium transition-colors hover:opacity-80"
+                      style={{ color: '#00A176' }}
+                    >
+                      View Project Details →
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+
+          {filteredProjects.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <p className="text-lg" style={{ color: '#4A4A4A' }}>
+                No projects found in this category. Please try another filter.
+              </p>
+            </motion.div>
+          )}
+        </div>
+      </section>
+>>>>>>> bc0988619137592ec094dc34d109b8db15967b6b
     </>
   );
 };
