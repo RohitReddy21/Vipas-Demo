@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
       <section className="relative overflow-hidden pt-36 pb-20 bg-secondary">
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-35">
-            <source src={heroVideo} type="video/mp4" />
+            <source src={heroVideo} type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 to-secondary/50"></div>
         </div>
@@ -306,9 +306,9 @@ const ContactPage: React.FC = () => {
       {/* Map Section */}
       <section className="h-96 bg-gray-100 relative">
         {/* Map Embed would go here - This is a placeholder */}
-        <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+        {/* <div className="w-full h-full bg-gray-300 flex items-center justify-center">
           <p className="text-gray-600">Interactive Map Would Be Embedded Here</p>
-        </div>
+        </div> */}
       </section>
     </>
   );

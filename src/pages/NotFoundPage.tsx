@@ -11,7 +11,7 @@ const NotFoundPage: React.FC = () => {
         description="The page you are looking for could not be found."
       />
       
-      <div className="min-h-screen pt-32 pb-20 flex items-center">
+      <div className="min-h-screen pt-36 pb-20 flex items-center">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

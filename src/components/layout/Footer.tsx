@@ -10,9 +10,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: About */}
           <div>
-            <div className="mb-6">
-            <img src={logo} alt="" className='w-[250px] h-[75px] object-contain cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80 hover:shadow-lg hover:shadow-primary rounded-md rounded-tl-[20px] rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px]' />
-
+            <div className="mb-6 inline-block bg-white rounded-xl p-3 shadow-md">
+              <img src={logo} alt="Vipas Energy" className="w-[170px] h-[64px] object-contain cursor-pointer transition-all duration-300 hover:scale-105" />
             </div>
             <p className="text-gray-300 mb-6">
               Vipas Energy is dedicated to providing sustainable energy solutions that power the future while preserving our planet.

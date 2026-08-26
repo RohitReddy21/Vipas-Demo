@@ -187,7 +187,7 @@ const ServicesPage: React.FC = () => {
       <section className="relative overflow-hidden pt-36 pb-20" style={{ backgroundColor: '#003F5C' }} ref={headerRef}>
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-35">
-            <source src={heroVideo} type="video/mp4" />
+            <source src={heroVideo} type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-[#003F5C]/70 to-[#003F5C]/50"></div>
         </div>
