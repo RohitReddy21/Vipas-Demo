@@ -250,11 +250,7 @@ const AboutPage = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                   </svg>
                 </div>
-<<<<<<< HEAD
                 {/* <h3 className="text-xl font-bold text-white mb-4">Partnership Approach</h3> */}
-=======
-                <h3 className="text-xl font-bold text-white mb-4">Partnership Approach</h3>
->>>>>>> bc0988619137592ec094dc34d109b8db15967b6b
                 <p className="text-white/80 leading-relaxed">
                   Vipas SEMS is not just a software solution; it's a partner in your journey toward energy efficiency, cost savings, and environmental responsibility. With a strong commitment to innovation and a track record of empowering clients to achieve their energy management goals.
                 </p>
