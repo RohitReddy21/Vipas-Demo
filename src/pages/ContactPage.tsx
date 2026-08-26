@@ -211,13 +211,13 @@ const ContactPage: React.FC = () => {
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  {/* <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <h3 className="font-montserrat font-medium text-secondary">Address</h3>
                     <p className="text-gray-700">SUITE 380, Plaza One61, 7301 State Highway 161, IRVING, TX 75039</p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex items-start gap-4">
@@ -233,15 +233,15 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  {/* <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-montserrat font-medium text-secondary">Phone</h3>
-                    <a href="tel:+1234567890" className="text-primary hover:text-primary-dark transition-colors">
+                  </div> */}
+                  {/* <div>
+                    <h3 className="font-montserrat font-medium text-secondary">Phone</h3> */}
+                    {/* <a href="tel:+1234567890" className="text-primary hover:text-primary-dark transition-colors">
                       +012 345 6789 , +012 345 6780
-                    </a>
-                  </div>
+                    </a> */}
+                  {/* </div> */}
                 </div>
               </div>
 
@@ -301,14 +301,6 @@ const ContactPage: React.FC = () => {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="h-96 bg-gray-100 relative">
-        {/* Map Embed would go here - This is a placeholder */}
-        {/* <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-          <p className="text-gray-600">Interactive Map Would Be Embedded Here</p>
-        </div> */}
       </section>
     </>
   );
