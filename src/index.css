@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-lora text-gray-custom bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-semibold text-secondary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-montserrat font-medium py-3 px-6 rounded-md transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-secondary hover:bg-secondary-dark text-white font-montserrat font-medium py-3 px-6 rounded-md transition-colors duration-300;
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-white font-montserrat font-medium py-3 px-6 rounded-md transition-colors duration-300;
+  }
+
+  .section-title {
+    @apply font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl text-secondary relative pb-4 mb-10;
+  }
+
+  .section-title::after {
+    @apply content-[''] absolute bottom-0 left-0 w-20 h-1 bg-primary rounded;
+  }
+  
+  .section-subtitle {
+    @apply font-montserrat font-semibold text-xl sm:text-2xl text-primary mb-6;
+  }
+}
