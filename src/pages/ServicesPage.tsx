@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  DollarSign, 
-  BarChart3, 
-  Settings, 
-  Users, 
-  Zap, 
-  TrendingUp, 
-  Activity, 
-  Bell, 
-  Monitor, 
-  Shield, 
-  HeadphonesIcon, 
+import {
+  DollarSign,
+  BarChart3,
+  Settings,
+  Users,
+  Zap,
+  TrendingUp,
+  Activity,
+  Bell,
+  Monitor,
+  Shield,
+  HeadphonesIcon,
   FileText,
   Search,
   Archive
@@ -22,33 +22,35 @@ import heroVideo from '../components/home/assets/video.webm';
 
 const ServicesPage: React.FC = () => {
   const [headerRef, headerInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  
+
   const services = [
     {
       id: 'expense-data-management',
       name: 'Expense & Data Management',
       description: 'Streamline your financial processes and harness the power of data for informed decision-making.',
       fullDescription: 'In order to adapt to changes and data-driven business world, managing expenses and harnessing the power of data are critical for financial success and making informed decisions. We understand the challenges that organizations face in these areas at Vipas Expense and Data Management, and we provide innovative solutions that streamline processes, improve efficiency, and provide you with actionable insights.',
+      approachTitle: 'Our Approach',
+      approach: 'Our approach to expense and data management is based on the belief that every penny counts and that every byte of data has the potential to unlock valuable opportunities. With this philosophy at the heart of our services, we provide a suite of cutting-edge solutions to assist businesses of all sizes in regaining control of their financial processes and data assets.',
       features: [
-        { 
-          icon: <DollarSign />, 
-          name: 'Expense Management', 
-          description: 'All-encompassing software platform that streamlines expense tracking and reimbursement process. Our platform streamlines the workflow, reduces administrative burdens, and ensures accuracy when managing vendor invoices or other financial transactions.' 
+        {
+          icon: <DollarSign />,
+          name: 'Expense Management',
+          description: 'Vipas Expense Management is an all-encompassing software platform that streamlines the expense tracking and reimbursement process. Our platform streamlines the workflow, reduces administrative burdens, and ensures accuracy when managing vendor invoices or other financial transactions.'
         },
-        { 
-          icon: <BarChart3 />, 
-          name: 'Data Analytics', 
-          description: 'Extract meaningful information from your financial data. Whether you need to understand spending patterns, forecast expenses, or identify cost-saving opportunities, our analytics solutions have you covered.' 
+        {
+          icon: <BarChart3 />,
+          name: 'Data Analytics',
+          description: 'Data is a goldmine of insights waiting to be discovered. Our data analytics tools are designed to help you extract meaningful information from your financial data. Whether you need to understand spending patterns, forecast expenses, or identify cost-saving opportunities, our analytics solutions have you covered.'
         },
-        { 
-          icon: <Settings />, 
-          name: 'Customization', 
-          description: 'We understand that every business is unique. Our solutions are highly customizable to align with your specific requirements and objectives.' 
+        {
+          icon: <Settings />,
+          name: 'Customization',
+          description: 'We understand that every business is unique, and your expense and data management needs may differ. Our solutions are highly customizable to align with your specific requirements and objectives.'
         },
-        { 
-          icon: <Users />, 
-          name: 'Expertise', 
-          description: 'With years of experience in financial technology and data management, our team of experts brings a wealth of knowledge to the table.' 
+        {
+          icon: <Users />,
+          name: 'Expertise',
+          description: 'With years of experience in financial technology and data management, our team of experts brings a wealth of knowledge to the table.'
         }
       ]
     },
@@ -57,31 +59,33 @@ const ServicesPage: React.FC = () => {
       name: 'Energy Analytics',
       description: 'Powerful data-driven insights to optimize your energy consumption and reduce costs.',
       fullDescription: 'At Vipas Energy, we understand that data-driven decision-making is the key to effective energy management. That is why we are pleased to present Vipas Energy Analytics, a powerful tool designed to provide deep insights into your energy consumption patterns, allowing you to optimize efficiency, reduce costs, and improve green credentials.',
+      approachTitle: 'The Power of Data-Driven Insights',
+      approach: 'Vipas Energy Analytics transforms your energy data into actionable insights by leveraging advanced data analytics and visualization. Understanding your energy consumption, we believe, is the first step toward taking control of it. Our platform provides a comprehensive set of features that are tailored to the specific requirements of businesses and organizations of all sizes.',
       features: [
-        { 
-          icon: <Activity />, 
-          name: 'Real-Time Monitoring', 
-          description: 'Monitor your energy consumption in real-time. Track electricity, gas, water, and more, all from one centralized dashboard. Stay informed and make instant adjustments when necessary.' 
+        {
+          icon: <Activity />,
+          name: 'Real-Time Monitoring',
+          description: 'With Vipas Energy Analytics, you can monitor your energy consumption in real-time. Track electricity, gas, water, and more, all from one centralized dashboard. Stay informed and make instant adjustments when necessary.'
         },
-        { 
-          icon: <TrendingUp />, 
-          name: 'Predictive Analytics', 
-          description: 'Our platform employs predictive analytics to forecast future energy usage patterns. Anticipate peak demand periods and proactively implement energy-saving strategies.' 
+        {
+          icon: <TrendingUp />,
+          name: 'Predictive Analytics',
+          description: 'Our platform employs predictive analytics to forecast future energy usage patterns. Anticipate peak demand periods and proactively implement energy-saving strategies.'
         },
-        { 
-          icon: <BarChart3 />, 
-          name: 'Historical Data Analysis', 
-          description: 'Dive deep into historical energy data to identify trends, anomalies, and areas for improvement. Essential for recognizing long-term consumption patterns and establishing baseline benchmarks.' 
+        {
+          icon: <BarChart3 />,
+          name: 'Historical Data Analysis',
+          description: 'Dive deep into historical energy data to identify trends, anomalies, and areas for improvement. Historical analysis is essential for recognizing long-term consumption patterns and establishing baseline benchmarks.'
         },
-        { 
-          icon: <DollarSign />, 
-          name: 'Cost Reduction', 
-          description: 'By gaining a better understanding of your energy consumption, you can identify opportunities for cost reduction. Optimize equipment operation schedules, reduce wastage, and minimize unnecessary expenses.' 
+        {
+          icon: <DollarSign />,
+          name: 'Cost Reduction',
+          description: 'By gaining a better understanding of your energy consumption, you can identify opportunities for cost reduction. Optimize equipment operation schedules, reduce wastage, and minimize unnecessary expenses.'
         },
-        { 
-          icon: <FileText />, 
-          name: 'Customized Reporting', 
-          description: 'Generate customized reports and dashboards to visualize your energy data in a way that makes sense for your organization. Share insights with stakeholders and team members effortlessly.' 
+        {
+          icon: <FileText />,
+          name: 'Customized Reporting',
+          description: 'Generate customized reports and dashboards to visualize your energy data in a way that makes sense for your organization. Share insights with stakeholders and team members effortlessly.'
         }
       ]
     },
@@ -89,27 +93,29 @@ const ServicesPage: React.FC = () => {
       id: 'alerts-monitoring',
       name: 'Alerts & Monitoring',
       description: 'Real-time monitoring and instant alerts to keep you in control of your energy resources.',
-      fullDescription: 'Staying informed and in control is critical in the fast-paced world of energy management. Vipas Alerts & Monitoring is a key feature of our smart energy management system designed to help businesses manage their energy resources more effectively, reduce costs, and maximize efficiency. At Vipas Energy, we understand that energy management is not a set-it-and-forget-it task. It requires continuous vigilance and quick responses to changing conditions.',
+      fullDescription: 'Staying informed and in control is critical in the fast-paced world of energy management. That\'s where Vipas Alerts & Monitoring comes in, a key feature of our smart energy management system designed to help businesses manage their energy resources more effectively, reduce costs, and maximize efficiency.',
+      approachTitle: '',
+      approach: 'At Vipas Energy, we understand that energy management is not a set-it-and-forget-it task. It requires continuous vigilance and quick responses to changing conditions. With Vipas Alerts & Monitoring, you gain real-time visibility into your energy consumption, equipment performance, and environmental factors that impact your energy usage.',
       features: [
-        { 
-          icon: <Bell />, 
-          name: 'Instant Alerts', 
-          description: 'When predefined thresholds are exceeded or anomalies are detected, receive immediate notifications via email, SMS, or within the software itself. You\'ll be the first to know if there\'s an unexpected increase in energy consumption or a malfunctioning piece of equipment.' 
+        {
+          icon: <Bell />,
+          name: 'Instant Alerts',
+          description: 'When predefined thresholds are exceeded or anomalies are detected, receive immediate notifications via email, SMS, or within the software itself. You\'ll be the first to know if there\'s an unexpected increase in energy consumption or a malfunctioning piece of equipment.'
         },
-        { 
-          icon: <Monitor />, 
-          name: 'Comprehensive Monitoring', 
-          description: 'Goes beyond energy consumption. It also monitors environmental conditions, the health of equipment, and other critical factors that affect energy efficiency.' 
+        {
+          icon: <Monitor />,
+          name: 'Comprehensive Monitoring',
+          description: 'Vipas Alerts & Monitoring goes beyond energy consumption. It also monitors environmental conditions, the health of equipment, and other critical factors that affect energy efficiency.'
         },
-        { 
-          icon: <DollarSign />, 
-          name: 'Cost Savings', 
-          description: 'Timely alerts and continuous monitoring allow you to address energy inefficiencies promptly, resulting in substantial cost savings over time.' 
+        {
+          icon: <DollarSign />,
+          name: 'Cost Savings',
+          description: 'Timely alerts and continuous monitoring allow you to address energy inefficiencies promptly, resulting in substantial cost savings over time.'
         },
-        { 
-          icon: <BarChart3 />, 
-          name: 'Data-Driven Decision-Making', 
-          description: 'Access to real-time data and historical insights empowers data-driven decision-making, ensuring that you\'re always in control of your energy management strategy.' 
+        {
+          icon: <BarChart3 />,
+          name: 'Data-Driven Decision-Making',
+          description: 'Access to real-time data and historical insights empowers data-driven decision-making, ensuring that you\'re always in control of your energy management strategy.'
         }
       ]
     },
@@ -118,21 +124,23 @@ const ServicesPage: React.FC = () => {
       name: 'Client Services',
       description: 'Dedicated support and services that go beyond software provision.',
       fullDescription: 'Vipas Energy acknowledges that our clients are at the heart of our mission. We are dedicated to providing exceptional client services that go beyond the provision of software. Our goal is to enable you to effectively optimize your energy management efforts, reduce costs, and make environmentally responsible decisions.',
+      approachTitle: '',
+      approach: '',
       features: [
-        { 
-          icon: <HeadphonesIcon />, 
-          name: 'Dedicated Support Teams', 
-          description: 'We dedicate support teams to each client. Our teams are made up of knowledgeable and experienced professionals who are enthusiastic about assisting you in reaching your energy management objectives.' 
+        {
+          icon: <HeadphonesIcon />,
+          name: 'Dedicated Support Teams',
+          description: 'We understand how difficult it can be to navigate the world of energy management. We dedicate support teams to each client. Our teams are made up of knowledgeable and experienced professionals who are enthusiastic about assisting you in reaching your energy management objectives. Whether you have a question, an issue, or require assistance, our client service teams are here to help you every step of the way.'
         },
-        { 
-          icon: <Shield />, 
-          name: 'Continuous Monitoring and Support', 
-          description: 'Energy management is an ongoing effort. We provide continuous monitoring of your energy performance and proactively identify potential issues, anomalies, or opportunities for improvement.' 
+        {
+          icon: <Shield />,
+          name: 'Continuous Monitoring and Support',
+          description: 'Energy management is an ongoing effort. Vipas Client Services provide continuous monitoring of your energy performance. We proactively identify potential issues, anomalies, or opportunities for improvement, ensuring that you stay on track with your energy management goals.'
         },
-        { 
-          icon: <TrendingUp />, 
-          name: 'Scalability and Growth Support', 
-          description: 'As your organization grows, your energy management needs may evolve. Our Client Services support your scalability requirements, ensuring that our solutions adapt to your changing circumstances and objectives.' 
+        {
+          icon: <TrendingUp />,
+          name: 'Scalability and Growth Support',
+          description: 'As your organization grows, your energy management needs may evolve. Vipas Client Services support your scalability requirements, ensuring that our solutions adapt to your changing circumstances and objectives.'
         }
       ]
     },
@@ -141,26 +149,28 @@ const ServicesPage: React.FC = () => {
       name: 'Document Library',
       description: 'Centralized document management for all your energy-related information.',
       fullDescription: 'Staying informed and organized is critical in the ever-changing landscape of energy management. Vipas Smart Energy Management Software recognizes the value of having quick access to critical information, compliance documents, energy reports, and relevant resources. The Vipas Document Library is a powerful feature designed to help energy professionals, businesses, and organizations achieve energy efficiency and sustainability.',
+      approachTitle: '',
+      approach: '',
       features: [
-        { 
-          icon: <Archive />, 
-          name: 'Centralized Document Management', 
-          description: 'Bid farewell to scattered documents and disparate storage systems. Centralize all your energy-related documents, including utility bills, compliance certificates, energy audit reports, and energy contracts in one secure location.' 
+        {
+          icon: <Archive />,
+          name: 'Centralized Document Management',
+          description: 'Bid farewell to scattered documents and disparate storage systems. Vipas Document Library centralizes all your energy-related documents, including utility bills, compliance certificates, energy audit reports, Energy contracts and more, in one secure location.'
         },
-        { 
-          icon: <FileText />, 
-          name: 'Effortless Organization', 
-          description: 'Our user-friendly interface makes it easy to organize documents by module, categories, and tags, ensuring that you can quickly locate the information you need when you need it.' 
+        {
+          icon: <FileText />,
+          name: 'Effortless Organization',
+          description: 'Our user-friendly interface makes it easy to organize documents by module, categories, and tags, ensuring that you can quickly locate the information you need when you need it.'
         },
-        { 
-          icon: <Search />, 
-          name: 'Search and Retrieval', 
-          description: 'Our robust search functionality allows you to swiftly retrieve documents using keywords, dates, or specific criteria.' 
+        {
+          icon: <Search />,
+          name: 'Search and Retrieval',
+          description: 'Our robust search functionality allows you to swiftly retrieve documents using keywords, dates, or specific criteria.'
         },
-        { 
-          icon: <Settings />, 
-          name: 'Version Control', 
-          description: 'Keep track of document revisions and updates effortlessly. Our Document Library maintains version history, ensuring that you always have access to the most recent information.' 
+        {
+          icon: <Settings />,
+          name: 'Version Control',
+          description: 'Keep track of document revisions and updates effortlessly. Vipas Document Library maintains version history, ensuring that you always have access to the most recent information.'
         }
       ]
     }
@@ -168,8 +178,8 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-      <SEO 
-        title="Services" 
+      <SEO
+        title="Services"
         description="Explore Vipas Energy's comprehensive services including expense & data management, energy analytics, alerts & monitoring, client services, and document library solutions."
       />
 
@@ -204,7 +214,7 @@ const ServicesPage: React.FC = () => {
         const isEven = index % 2 === 0;
 
         return (
-          <section 
+          <section
             id={service.id}
             key={service.id}
             ref={ref}
@@ -222,29 +232,31 @@ const ServicesPage: React.FC = () => {
                   <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#003F5C' }}>
                     {service.name}
                   </h2>
-                  <p className="text-lg mb-6" style={{ color: '#4A4A4A' }}>
-                    {service.description}
-                  </p>
-                  <p className="text-base mb-8" style={{ color: '#4A4A4A' }}>
+                  <p className="text-base mb-6" style={{ color: '#4A4A4A' }}>
                     {service.fullDescription}
                   </p>
-                  
-                  <div className="space-y-8">
+
+                  {service.approach && (
+                    <>
+                      {service.approachTitle && (
+                        <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#003F5C' }}>
+                          {service.approachTitle}
+                        </h3>
+                      )}
+                      <p className="text-base mb-6" style={{ color: '#4A4A4A' }}>
+                        {service.approach}
+                      </p>
+                    </>
+                  )}
+
+                  <h3 className="text-xl font-semibold mb-3" style={{ fontFamily: 'Montserrat, sans-serif', color: '#003F5C' }}>
+                    Key Features and Benefits
+                  </h3>
+                  <div className="space-y-4">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex gap-4">
-                        <div 
-                          className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white"
-                          style={{ backgroundColor: '#00A176' }}
-                        >
-                          {feature.icon}
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Montserrat, sans-serif', color: '#003F5C' }}>
-                            {feature.name}
-                          </h3>
-                          <p style={{ color: '#4A4A4A' }}>{feature.description}</p>
-                        </div>
-                      </div>
+                      <p key={idx} style={{ color: '#4A4A4A' }}>
+                        <strong style={{ color: '#003F5C' }}>{feature.name}:</strong> {feature.description}
+                      </p>
                     ))}
                   </div>
                 </motion.div>
@@ -257,9 +269,9 @@ const ServicesPage: React.FC = () => {
                 >
                   {/* Service-specific images */}
                   <div className="rounded-lg overflow-hidden shadow-xl">
-                    <img 
+                    <img
                       src={
-                        service.id === 'expense-data-management' 
+                        service.id === 'expense-data-management'
                           ? 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg'
                           : service.id === 'energy-analytics'
                             ? 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg'
@@ -273,13 +285,13 @@ const ServicesPage: React.FC = () => {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                  
+
                   {/* Floating decorative elements */}
-                  <div 
+                  <div
                     className="absolute -bottom-6 -right-6 w-24 h-24 rounded-lg opacity-20 hidden md:block"
                     style={{ backgroundColor: '#00A176' }}
                   ></div>
-                  <div 
+                  <div
                     className="absolute -top-6 -left-6 w-12 h-12 rounded-full opacity-30 hidden md:block"
                     style={{ backgroundColor: '#003F5C' }}
                   ></div>
@@ -298,14 +310,14 @@ const ServicesPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white" style={{ fontFamily: 'Montserrat, sans-serif',color: '#FFFFFF' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white" style={{ fontFamily: 'Montserrat, sans-serif', color: '#FFFFFF' }}>
               Ready to Optimize Your Operations?
             </h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
               Contact us today for a consultation and discover how our comprehensive solutions can transform your energy management and data analytics capabilities.
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
               style={{ color: '#003F5C' }}
             >
