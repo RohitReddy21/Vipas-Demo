@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Building2, Factory, Handshake, Home, Store } from 'lucide-react';
 import SEO from '../components/ui/SEO';
 
 type Project = {
@@ -85,30 +85,15 @@ const projects: Project[] = [
 ];
 
 const ProjectsPage: React.FC = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
-
-  useEffect(() => {
-    if (selectedCategory === 'all') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(project => project.category === selectedCategory));
-    }
-  }, [selectedCategory]);
 
   const categories = [
-    { id: 'all', name: 'All Verticals' },
-    { id: 'manufacturing', name: 'Manufacturing' },
-    { id: 'senior-living', name: 'Senior Living' },
-    { id: 'multi-family', name: 'Multi-Family Housing' },
-    { id: 'healthcare', name: 'Healthcare' },
-    { id: 'retail', name: 'Retail' },
-    { id: 'student-housing', name: 'Student Housing' }
+    { id: 'manufacturing', name: 'Manufacturing', icon: Factory },
+    { id: 'senior-living', name: 'Senior Living', icon: Building2 },
+    { id: 'multi-family', name: 'Multi-Family Housing', icon: Building2 },
+    { id: 'healthcare', name: 'Healthcare', icon: Handshake },
+    { id: 'retail', name: 'Retail', icon: Store },
+    { id: 'student-housing', name: 'Student Housing', icon: Home }
   ];
 
   return (
@@ -328,13 +313,44 @@ const ProjectsPage: React.FC = () => {
             </p>
           </motion.div>
         </div>
+        
+      </section>
+      {/* Vertical selector */}
+      <section className="border-b border-[#DCEDEA] bg-white py-8 sm:py-10">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-6 lg:gap-6">
+            {categories.map(({ id, name, icon: Icon }) => {
+              const isSelected = selectedCategory === id;
+
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setSelectedCategory(isSelected ? 'all' : id)}
+                  aria-pressed={isSelected}
+                  aria-label={`${name}: ${projects.filter(project => project.category === id).length} projects`}
+                  className="group flex min-w-0 flex-col items-center text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00A176] focus-visible:ring-offset-4"
+                >
+                  <span className={`flex h-14 w-14 items-center justify-center rounded-full border-2 transition-all duration-300 sm:h-16 sm:w-16 ${
+                    isSelected
+                      ? 'border-[#00A176] bg-[#00A176] text-white shadow-md'
+                      : 'border-[#20AEDE] bg-white text-[#20AEDE] group-hover:bg-[#E6F4F1] group-hover:shadow-md'
+                  }`}>
+                    <Icon className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <span className={`mt-3 max-w-[150px] font-montserrat text-xs font-medium leading-tight transition-colors sm:text-sm ${
+                    isSelected ? 'text-[#00A176]' : 'text-[#4A4A4A] group-hover:text-[#003F5C]'
+                  }`}>
+                    {name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
-      {/* Projects Gallery */}
-      {/* <section className="py-20 bg-white" ref={ref}>
-        <div className="container-custom">
-          {/* Filter Controls */}
-          {/*  */}
+  
     </>
   );
 };

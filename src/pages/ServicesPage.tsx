@@ -218,10 +218,17 @@ const ServicesPage: React.FC = () => {
                   <p className="text-lg mb-6" style={{ color: '#4A4A4A' }}>
                     {service.description}
                   </p>
+
+                  <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ fontFamily: 'Montserrat, sans-serif', color: '#00A176' }}>
+                    Our Approach
+                  </h3>
                   <p className="text-base mb-8" style={{ color: '#4A4A4A' }}>
                     {service.fullDescription}
                   </p>
-                  
+
+                  <h3 className="text-sm font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'Montserrat, sans-serif', color: '#00A176' }}>
+                    Key Features &amp; Benefits
+                  </h3>
                   <div className="space-y-8">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex gap-4">
@@ -291,7 +298,7 @@ const ServicesPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 whi" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Ready to Optimize Your Operations?
             </h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">

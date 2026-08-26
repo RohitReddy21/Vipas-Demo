@@ -134,7 +134,7 @@ const ServicesSummary: React.FC = () => {
               </p>
               
               {/* Link with enhanced hover effects */}
-              <Link 
+              {/* <Link 
                 to={service.link} 
                 className="text-primary group-hover:text-primary font-montserrat font-medium transition-all duration-300 flex items-center gap-1 relative z-10 group-hover:gap-2"
               >
@@ -142,7 +142,7 @@ const ServicesSummary: React.FC = () => {
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </Link>
+              </Link> */}
 
               {/* Subtle shine effect on hover */}
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
@@ -151,9 +151,9 @@ const ServicesSummary: React.FC = () => {
         </motion.div>
 
         <div className="text-center mt-12">
-          <Link to="/sems" className="btn-primary">
+          {/* <Link to="/sems" className="btn-primary">
             Learn More About SEMS
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
