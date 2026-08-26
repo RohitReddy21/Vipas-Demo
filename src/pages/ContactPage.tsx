@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import SEO from '../components/ui/SEO';
+import heroVideo from '../components/home/assets/video.webm';
 
 const ContactPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -42,8 +43,14 @@ const ContactPage: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-secondary">
-        <div className="container-custom">
+      <section className="relative overflow-hidden pt-32 pb-20 bg-secondary">
+        <div className="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

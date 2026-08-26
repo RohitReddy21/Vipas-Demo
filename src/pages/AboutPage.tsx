@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import heroVideo from '../components/home/assets/video.webm';
 
 const AboutPage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -46,10 +47,16 @@ const AboutPage = () => {
         }`}
         style={{ backgroundColor: '#003F5C' }}
       >
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-20">
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#003F5C]/90 to-[#003F5C]/70"></div>
+        </div>
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l opacity-20" style={{ background: 'linear-gradient(to left, #00A176, transparent)' }}></div>
-        <div className="absolute inset-0 bg-black/5"></div>
-        
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l opacity-20 z-[1]" style={{ background: 'linear-gradient(to left, #00A176, transparent)' }}></div>
+
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
